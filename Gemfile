@@ -23,6 +23,7 @@ gem 'jquery-rails'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'active_model_serializers'
+gem "devise"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -36,12 +37,14 @@ gem 'active_model_serializers'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem "rspec-rails", "~> 2.14"
 end
 
 group :test do
-  gem "rspec-rails", "~> 2.14"
+
   gem "factory_girl_rails"
   gem 'ffaker'
+  gem "shoulda-matchers"
 end
 
 group :development do
